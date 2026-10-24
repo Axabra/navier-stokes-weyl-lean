@@ -1,0 +1,82 @@
+version: "v0.7"
+
+project:
+  name: "AXABRA exact-Weyl / Navier--Stokes Lean bridge"
+  description: >-
+    A kernel-checked construction of the flat Euclidean covariant derivative
+    in the AXABRA exact zero-Weyl gauge, proofs of metric compatibility and
+    zero torsion, reduction to the classical Navier--Stokes operator, and a
+    transparent composition with the pinned OpenAI proof establishing the
+    complete alternatives (C) and (D) in the AXABRA interface.
+  authors:
+    - "Axel Abdel Rahamane Meghezzi (AXABRA bridge)"
+
+sources:
+  - title: "A Kernel-Checked of Navier--Stokes Blow-Up into Weyl Hydrodynamics, with a Lean-Certified Yang--Mills Application"
+    id: "https://doi.org/10.5281/zenodo.22974767"
+    authors:
+      - "Axel Abdel Rahamane Meghezzi"
+    type: "software documentation"
+    relationship: "documents"
+  - title: "Finite time blowup for Navier--Stokes"
+    id: "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf"
+    authors:
+      - "OpenAI"
+    type: "article"
+    relationship: "upstream theorem imported by the bridge"
+
+formalization:
+  language: "Lean"
+  version: "4.34.0-rc2"
+  repository: "https://github.com/Axabra/navier-stokes-weyl-lean"
+  declarations:
+    - name: "AxabraPersonalWeylBlowupR3.construct_personal_zero_weyl_blowup_R3"
+      file: "PersonalWeylBlowupR3.lean"
+      status: "proved in the exact zero-Weyl Euclidean representative"
+    - name: "AxabraPersonalWeylBlowupR3.personal_zero_weyl_speed_unbounded_at_one"
+      file: "PersonalWeylBlowupR3.lean"
+      status: "proved"
+    - name: "AxabraPersonalWeylBlowupR3.personal_zero_weyl_h3_unbounded_at_one"
+      file: "PersonalWeylBlowupR3.lean"
+      status: "proved"
+    - name: "AxabraPersonalWeylBlowupR3.personal_zero_weyl_no_global_finite_energy_solution"
+      file: "PersonalWeylBlowupR3.lean"
+      status: "proved"
+    - name: "AxabraPersonalBlowupR3.personal_candidate_one_with_initial_rest"
+      file: "PersonalBlowupR3.lean"
+      status: "proved from pinned low-level physical witness"
+    - name: "AxabraPersonalBlowupR3.personal_speed_unbounded_at_one"
+      file: "PersonalBlowupR3.lean"
+      status: "proved"
+    - name: "AxabraPersonalBlowupR3.personal_h3_unbounded_at_one"
+      file: "PersonalBlowupR3.lean"
+      status: "proved"
+    - name: "AxabraPersonalBlowupR3.personal_no_global_finite_energy_solution"
+      file: "PersonalBlowupR3.lean"
+      status: "proved"
+    - name: "AxabraWeylZeroGaugeGeometryOpenAIBridge.paper_euclidean_connection_metric_compatible"
+      file: "GeometricSubmission.lean"
+      status: "proved"
+    - name: "AxabraWeylZeroGaugeGeometryOpenAIBridge.paper_euclidean_connection_torsion_free"
+      file: "GeometricSubmission.lean"
+      status: "proved"
+    - name: "AxabraWeylZeroGaugeGeometryOpenAIBridge.paper_zero_gauge_euclidean_geometry"
+      file: "GeometricSubmission.lean"
+      status: "proved"
+    - name: "AxabraWeylZeroGaugeGeometryOpenAIBridge.openai_breakdown_realized_in_zero_exact_weyl_R3"
+      file: "GeometricSubmission.lean"
+      status: "proved using pinned OpenAI dependency"
+    - name: "AxabraWeylZeroGaugeGeometryOpenAIBridge.openai_breakdown_realized_in_zero_exact_weyl_periodic"
+      file: "GeometricSubmission.lean"
+      status: "proved using pinned OpenAI dependency"
+
+attribution:
+  bridge_author: "Axel Abdel Rahamane Meghezzi"
+  upstream_breakdown_proof_author: "OpenAI"
+  independent_millennium_solution_claim: false
+  local_reconstruction_without_terminal_breakdown_call: true
+  reconstructed_mechanism_provenance: "OpenAI"
+  personal_exact_weyl_representative: "phi = 0, Q = d phi = 0, Euclidean metric"
+  nonzero_weyl_one_form_formalized: false
+  composed_cd_theorem_complete: true
+  geometric_root_mathdb_review_status: "pending"

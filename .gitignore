@@ -1,0 +1,8 @@
+/.lake/
+/lake-manifest.json
+/verification/accepted-replay.json
+*.olean
+*.ilean
+*.c
+*.o
+*.trace

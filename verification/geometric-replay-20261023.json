@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "local_compiled_pending_mathdb_review",
+  "verified_at": "2026-10-23T19:13:07-04:00",
+  "root_file": "GeometricSubmission.lean",
+  "sha256": "7d865bc0885ab2883873ccefd782cb90186b424b32fe4f9eedccad2770237232",
+  "source_candidate": "Axabra_Weyl_ZERO_GAUGE_GEOMETRY_OpenAI_BRIDGE_20260912_062145.lean",
+  "repair": {
+    "removed_missing_import": "Mathlib.Geometry.Manifold.VectorBundle.CovariantDerivative.LeviCivita",
+    "explicit_connection": "nabla_X Y = D Y applied to X",
+    "metric_compatibility_proved": true,
+    "torsion_zero_proved": true,
+    "local_levi_civita_characterization": "metric-compatible and torsion-free"
+  },
+  "source_repository": "https://github.com/openai/NavierStokesAndEuler.git",
+  "repo_git_head": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+  "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "lean_version": "Lean 4.34.0-rc2, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+  "mathlib_rev": "85e3a25e006c35636f0e53b0e9296caca2685bc0",
+  "compile": {
+    "command": "lake env lean GeometricSubmission.lean",
+    "exit_code": 0
+  },
+  "package_build": {
+    "command": "lake build Submission",
+    "exit_code": 0,
+    "jobs": 9375,
+    "built_modules": [
+      "Submission",
+      "GeometricSubmission"
+    ]
+  },
+  "checked_declarations": [
+    "paper_euclidean_connection_metric_compatible",
+    "paper_euclidean_connection_torsion_free",
+    "paper_zero_gauge_connection_is_levi_civita",
+    "paper_zero_gauge_euclidean_geometry",
+    "PaperZeroWeylEuclideanForcedRn.toComparator",
+    "PaperZeroWeylEuclideanForcedPeriodic.toComparator",
+    "openai_breakdown_realized_in_zero_exact_weyl_R3",
+    "openai_breakdown_realized_in_zero_exact_weyl_periodic"
+  ],
+  "axioms_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "unexpected_axioms": [],
+  "contains_sorry": false,
+  "contains_admit": false,
+  "contains_custom_axiom": false,
+  "contains_unsafe": false
+}

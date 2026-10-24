@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "local_compiled_pending_mathdb_review",
+  "verified_at": "2026-10-23T20:08:33-04:00",
+  "root_file": "PersonalBlowupR3.lean",
+  "sha256": "834494cf0b9dc49116b09fe7aa712966c628a9284a19b4e671dd5608b832cc3e",
+  "scope": "forced finite-time blow-up on R3 at normalized time one",
+  "construction": {
+    "low_level_entry": "NavierStokes.ActualCandidateAssembly.selected_witness",
+    "local_candidate_assembly": "AxabraPersonalBlowupR3.personal_candidate_one_with_initial_rest",
+    "local_viscosity_scaling": true,
+    "terminal_breakdown_theorems_invoked": [],
+    "terminal_breakdown_modules_directly_imported": []
+  },
+  "proved_properties": {
+    "smooth_before_time_one": true,
+    "smooth_compactly_supported_force": true,
+    "zero_initial_velocity": true,
+    "navier_stokes_equation": true,
+    "divergence_free": true,
+    "uniform_finite_energy_before_time_one": true,
+    "speed_unbounded_at_time_one": true,
+    "h3_unbounded_at_time_one": true,
+    "no_global_smooth_finite_energy_continuation": true
+  },
+  "checked_declarations": [
+    "AxabraPersonalBlowupR3.personal_candidate_one_with_initial_rest",
+    "AxabraPersonalBlowupR3.exists_personal_blowup_R3",
+    "AxabraPersonalBlowupR3.construct_personal_blowup_R3",
+    "AxabraPersonalBlowupR3.personal_speed_unbounded_at_one",
+    "AxabraPersonalBlowupR3.personal_h3_unbounded_at_one",
+    "AxabraPersonalBlowupR3.personal_no_global_finite_energy_solution"
+  ],
+  "source_repository": "https://github.com/openai/NavierStokesAndEuler.git",
+  "repo_git_head": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+  "mathematical_mechanism_provenance": "reproduction of the pinned OpenAI construction",
+  "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "mathlib_rev": "85e3a25e006c35636f0e53b0e9296caca2685bc0",
+  "compile": {
+    "command": "lake env lean PersonalBlowupR3.lean",
+    "exit_code": 0
+  },
+  "package_build": {
+    "command": "lake build Submission",
+    "exit_code": 0,
+    "jobs": 9389,
+    "built_modules": [
+      "Submission",
+      "GeometricSubmission",
+      "PersonalBlowupR3"
+    ]
+  },
+  "axioms_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "unexpected_axioms": [],
+  "contains_sorry": false,
+  "contains_admit": false,
+  "contains_custom_axiom": false,
+  "contains_unsafe": false
+}

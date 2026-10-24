@@ -1,0 +1,12 @@
+name = "AxabraWeylNavierStokesBridge"
+version = "1.0.0"
+defaultTargets = ["Submission"]
+
+[[require]]
+name = "NavierStokesAndEuler"
+git = "https://github.com/openai/NavierStokesAndEuler.git"
+rev = "f9e8bc5b38b6e212696e8a30e3e91517af887bbd"
+
+[[lean_lib]]
+name = "Submission"
+globs = ["Submission", "GeometricSubmission", "PersonalBlowupR3", "PersonalWeylBlowupR3"]
